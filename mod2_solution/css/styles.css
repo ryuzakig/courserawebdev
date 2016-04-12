@@ -1,0 +1,91 @@
+/**** Simple Reset ***/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/**** Base Styles ***/
+body{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+h1{
+	margin: 50px 0 30px 0;
+}
+p{
+	font-family: 'Montserrat', sans-serif;
+}
+.boxes{
+	padding: 20px;
+}
+.box{
+	padding: 10px;
+	cursor: pointer;
+
+}
+.box .inner{
+	background-color: #E1DEDE;
+	border:1px solid black;
+	position: relative;
+	margin: 5px;
+	border-radius: 10px;
+}
+.box .inner .title{
+	position: absolute;
+	right: 0;
+	padding: 10px;
+	border:1px solid black;
+	border-radius: 10px;
+}
+.box:nth-child(1) .title{
+	background-color: #F6BAB4;
+}
+.box:nth-child(1):hover .title{
+	background-color: #B34F45;
+	color: #fff;
+}
+.box:nth-child(2) .title{
+	background-color: #D04032;
+}
+.box:nth-child(2):hover .title{
+	background-color: #865A56;
+	color: #fff;
+}
+.box:nth-child(3) .title{
+	background-color: #FEF2AD;
+}
+.box:nth-child(3):hover .title{
+	background-color: #E9C90F;
+	color: #fff;
+}
+.box .content{
+	padding: 20px;
+	margin-top: 30px;
+}
+
+/**** Media Queries for Desktop ***/
+@media (min-width: 992px) {
+  .box{
+  	width: 33.33%;
+  	float: left;
+  }
+}
+
+/**** Media Queries for Tablet ***/
+@media (min-width: 768px) and (max-width: 991px) {
+  .box{
+  	width: 50%;
+  	float: left;
+  }
+  .box:nth-child(3){
+  	width: 100%;
+  	float: left;
+  }
+}
+
+/**** Media Queries for Mobiles ***/
+@media (max-width: 767px) {
+  .box{
+  	width: 100%;
+  }
+}
